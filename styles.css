@@ -8,6 +8,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+:root {
+    --bgImg: url('./assets/pillars-of-creation.jpg');
+}
+
 html {
     font-size: 62.5%;
 }
@@ -32,18 +36,42 @@ header {
 
 main {
     height: 50vh;
-    display: flex;
-    align-items: center;
-    background-image: url('./assets/pillars-of-creation.jpg');
+    background-image: var(--bgImg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+main .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     height: 25vh;
+    color: white;
+    font-size: 3rem;
+}
+
+footer .wrapper {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+footer p {
+    margin: 0;
 }
 
 h1 {
@@ -60,14 +88,29 @@ h2 {
 }
 
 h3 {
-    margin: 0;
+    margin: 10% 0;
     font-size: 3rem;
     color: white;
     text-transform: uppercase;
     text-shadow: 1px 1px black;
 }
 
-footer {
+button {
+    margin: 5%;
+    background-color: firebrick;
+    border-style: none;
     color: white;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 4rem;
+    transition: all 0.2s;
+}
+
+button:active {
+    background-color: cornflowerblue;
+}
+
+footer button {
     font-size: 1.5rem;
 }

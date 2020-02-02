@@ -8,7 +8,8 @@ const staticAssets = [
     './assets/',
     './assets/icon-512x512.png',
     './assets/icon-192x192.png',
-    './assets/pillars-of-creation.jpg'
+    './assets/pillars-of-creation.jpg',
+    './assets/m16a.jpg'
 ];
 
 self.addEventListener('install', async e => {
