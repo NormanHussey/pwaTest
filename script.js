@@ -29,7 +29,6 @@ const updateDOM = () => {
 }
 
 upBtn.addEventListener('click', e => {
-    console.log(main);
     counter++;
     updateDOM();
 });
